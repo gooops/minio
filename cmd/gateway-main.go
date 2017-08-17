@@ -364,9 +364,9 @@ func gatewayMain(ctx *cli.Context, backendType gatewayBackend) {
 		// Auth handler verifies incoming authorization headers and
 		// routes them accordingly. Client receives a HTTP error for
 		// invalid/unsupported signatures.
-		setAuthHandler,
+		// setAuthHandler,
 		// Add new handlers here.
-
+		setAuthHandler_lp,
 	}
 
 	globalHTTPServer = miniohttp.NewServer([]string{gatewayAddr}, registerHandlers(router, handlerFns...), globalTLSCertificate)

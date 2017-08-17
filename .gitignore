@@ -23,3 +23,5 @@ parts/
 prime/
 snap/.snapcraft/
 stage/
+minio.exe
+minio.tgz

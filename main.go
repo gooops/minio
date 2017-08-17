@@ -20,16 +20,16 @@
  * more information refer https://golang.org/doc/go1.4#canonicalimports
  */
 
-package main // import "github.com/minio/minio"
+package main // import "github.com/gooops/minio"
 
 import (
 	"fmt"
 	"os"
 	"runtime"
 
+	minio "github.com/gooops/minio/cmd"
 	version "github.com/hashicorp/go-version"
 	"github.com/minio/mc/pkg/console"
-	minio "github.com/minio/minio/cmd"
 )
 
 const (

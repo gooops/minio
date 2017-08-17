@@ -60,7 +60,7 @@ const specialAssets = "loader.css|logo.svg|firefox.png|safari.png|chrome.png|fav
 // registerWebRouter - registers web router for serving minio browser.
 func registerWebRouter(mux *router.Router) error {
 	// Initialize Web.
-	web := &webAPIHandlers{
+	web := &webAPIHandlers_lp{
 		ObjectAPI: newObjectLayerFn,
 	}
 

@@ -1,0 +1,54 @@
+{
+    "allow_put": {
+        "id": "1",
+        "description": "允许上传",
+        "subjects": [
+            "aaaaaaaa"
+        ],
+        "effect": "allow",
+        "resources": [
+            "</test.+>"
+        ],
+        "actions": [
+            "<PUT|HEAD|GET>"
+        ],
+        "conditions": {
+            "cidr": {
+                "type": "IPCondition",
+                "options": {
+                    "cidrs": "127.0.0.1/32,127.0.0.1/32,10.0.0.42,168.254.0.0/16,10.0.0.0/8"
+                }
+            },
+            "owner": {
+                "type": "EqualsSubjectCondition",
+                "options": {}
+            }
+        }
+    },
+    "deny_get": {
+        "id": "2",
+        "description": "禁止下载",
+        "subjects": [
+            "aaaaaaaa"
+        ],
+        "effect": "deny",
+        "resources": [
+            "</test1/.+>"
+        ],
+        "actions": [
+            "GET"
+        ],
+        "conditions": {
+            "cidr": {
+                "type": "IPCondition",
+                "options": {
+                    "cidrs": "127.0.0.1/32,127.0.0.1/32,10.0.0.42,168.254.0.0/16,10.0.0.0/8"
+                }
+            },
+            "owner": {
+                "type": "EqualsSubjectCondition",
+                "options": {}
+            }
+        }
+    }
+}
